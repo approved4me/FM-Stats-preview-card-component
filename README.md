@@ -10,6 +10,8 @@ Thanks for checking out this front-end coding challenge.
 
 **To do this challenge, you need a basic understanding of HTML and CSS.**
 
+Live: https://approved4me.github.io/FM-Stats-preview-card-component/
+
 ## The challenge
 
 Your challenge is to build out this card component and get it looking as close to the design as possible.
