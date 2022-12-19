@@ -203,6 +203,10 @@ article {
     border-radius: 0rem 0.5rem 0.5rem 0;
   }
 
+  .content_image img {
+    height: 100%;
+  }
+
   .content h1,
   .content p {
     text-align: left;
@@ -216,6 +220,7 @@ article {
   .content_stats {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
   }
 
   .stats {
