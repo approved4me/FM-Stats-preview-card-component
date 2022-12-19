@@ -52,7 +52,7 @@ h6 {
   --primary_main-bg: hsl(233, 47%, 7%);
   --primary_card-bg: hsl(244, 38%, 16%);
   --primary_accent: hsl(277, 64%, 61%);
-  
+
   --neutral_main-heading_stats: hsl(0, 0%, 100%);
   --neutral_main-paragraph: hsla(0, 0%, 100%, 0.75);
   --neutral_stat-headings: hsla(0, 0%, 100%, 0.6);
@@ -60,13 +60,14 @@ h6 {
 
 body {
   /* font-family: 'Lexend Deca', sans-serif; */
+  max-width: 1440px;
+  margin: auto;
   font-family: 'Inter', sans-serif;
   background-color: var(--primary_main-bg);
   color: var(--neutral_main-heading_stats);
   font-size: 15px;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -86,12 +87,13 @@ article {
 .content_image {
   border-radius: 0.5rem 0.5rem 0 0;
   overflow: hidden;
-  background-color: var(--primary_accent);  
+  background-color: var(--primary_accent);
 }
 
 .content_image img {
   opacity: 0.8;
   mix-blend-mode: multiply;
+  object-fit: cover;
 }
 
 .content {
@@ -114,11 +116,11 @@ article {
   color: var(--neutral_main-paragraph);
   font-weight: 400;
   text-align: center;
-  margin-block: 1rem;;
+  margin-block: 1rem;
+  ;
 }
 
-.content_stats > * {
-  
+.content_stats>* {
   color: var(--neutral_main-heading_stats);
   text-align: center;
   font-size: 1.5rem;
@@ -167,13 +169,56 @@ article {
   text-decoration: none;
 }
 
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 60rem) {
+
   body {
-    background-image: url(./images/pattern-background-desktop.svg);
+    justify-content: center;
+    padding: 10rem;
   }
 
   main {
-    width: 30rem;
+    width: 100%;
+    flex-direction: row;
   }
-    
-} */
+
+  article {
+    display: flex;
+    flex-direction: row-reverse;
+    /* align-items: center; */
+  }
+
+  .card_content {
+    flex: 0 1 55%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .content_image {
+    border-radius: 0rem 0.5rem 0.5rem 0;
+  }
+
+  .content h1,
+  .content p {
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .content_stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stats {
+    padding: 0;
+  }
+}
